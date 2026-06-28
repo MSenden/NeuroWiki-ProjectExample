@@ -29,6 +29,8 @@ See VERIFICATION.md for the verification protocol.
 
 **Citation integrity:** All factual claims cited. Secondary entries flagged with `†`.
 
+**Sign-off**: ✓ Verified — Mario Senden, 2026-06-28
+
 ---
 
 ## 2026-06-28 — Refine Session A/B (Theory and Model Depth; Model–Method Split)
@@ -43,6 +45,8 @@ See VERIFICATION.md for the verification protocol.
 **Conflicts found:** None new.
 
 **Citation integrity:** No new uncited claims introduced.
+
+**Sign-off**: ✓ Verified — Mario Senden, 2026-06-28
 
 ---
 
