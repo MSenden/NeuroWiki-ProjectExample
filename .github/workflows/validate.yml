@@ -1,0 +1,49 @@
+name: Validate wiki structure
+
+on:
+  push:
+    paths:
+      - 'wiki/**'
+  pull_request:
+    paths:
+      - 'wiki/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Structural validation
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check for pages
+        id: check
+        run: |
+          COUNT=$(find wiki/pages -name "*.md" 2>/dev/null | wc -l)
+          echo "page_count=$COUNT" >> $GITHUB_OUTPUT
+          echo "Pages found: $COUNT"
+
+      - name: Run structural validation
+        if: steps.check.outputs.page_count != '0'
+        run: |
+          python3 validate.py \
+            --source wiki/ \
+            --skip-log \
+            --report validation-report.json
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        if: always() && steps.check.outputs.page_count != '0'
+        with:
+          name: validation-report
+          path: validation-report.json
+
+      - name: Skip message
+        if: steps.check.outputs.page_count == '0'
+        run: echo "No pages in wiki/pages/ yet — skipping validation."
