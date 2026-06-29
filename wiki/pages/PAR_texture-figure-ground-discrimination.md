@@ -55,7 +55,7 @@ Contrast heterogeneity $\zeta$ is operationalized as the half-width of a uniform
 - First-session data may partly reflect non-perceptual learning (task familiarization, fixation strategy, stimulus-response mapping); session 2 was used as the early reference for transfer comparisons (@Karimian2025).
 - No neuroimaging or EEG/MEG recordings; mechanistic interpretation (gamma synchrony in V1) is theoretically inferred from the model, not directly measured in participants (@Karimian2025).
 
-## Key Studies and Datasets
+## Key Studies
 
 Primary source: (@Karimian2025). Psychophysical dataset: Karimian M, Roberts MJ, De Weerd P, Senden M (2024), Zenodo, https://doi.org/10.5281/zenodo.10817187. Analysis code: https://github.com/ccnmaastricht/NeuralSynchrony-FigureGround. Stimulus code: https://github.com/ccnmaastricht/TextureStimuli-FigureGround.
 

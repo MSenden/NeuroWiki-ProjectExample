@@ -8,14 +8,26 @@ This is an example project-level wiki derived from the **[NeuroWiki-Project](htt
 
 ```
 project-root/
-├── AGENT.md              ← agent identity and rules; read first every session
-├── INGESTION.md          ← workflow: processing new PDFs
-├── REFINE_A.md           ← workflow: structural harmonization
-├── REFINE_B.md           ← workflow: depth audit
-├── REFINE_C.md           ← workflow: cross-link audit
-├── VERIFICATION.md       ← human verification protocol
-├── QUICKSTART.md         ← session invocation prompts
 ├── README.md             ← this file
+├── CLAUDE.md             ← Claude Code context (auto-read on launch)
+├── AGENTS.md             ← OpenAI Codex context
+├── CURSOR.md             ← Cursor context
+├── GEMINI.md             ← Gemini CLI context
+├── project.md            ← project identity (source of truth; synced by setup.sh)
+├── agent/                ← agent instruction files
+│   ├── TEMPLATES.md      ← page templates, index structure, conflict resolution, citation rules
+│   ├── INGESTION.md      ← workflow: processing new PDFs
+│   ├── REVIEW.md         ← workflow: agent-assisted flag resolution
+│   ├── REFINE_A.md       ← workflow: structural harmonization
+│   ├── REFINE_B.md       ← workflow: depth audit
+│   └── REFINE_C.md       ← workflow: cross-link audit
+├── docs/                 ← human-facing documentation
+│   ├── QUICKSTART.md     ← session invocation prompts
+│   ├── VERIFICATION.md   ← human verification protocol
+│   └── CONTRIBUTING.md   ← lab wiki submission guide
+├── scripts/              ← tools
+│   ├── validate.py       ← pre-submission structural validator
+│   └── setup.sh          ← one-command project initialization
 ├── raw/                  ← source PDFs (git-ignored; never modified by agent)
 └── wiki/
     ├── primary.bib       ← BibTeX: papers with PDFs in raw/
@@ -31,11 +43,11 @@ project-root/
 This repo demonstrates the NeuroWiki conventions in practice:
 
 - **Two-tier citation system** — `(@Key)` for PDFs verified in `raw/`, `(@Key†)` for secondary citations reconstructed from within those PDFs
-- **Typed concept pages** — `PHE_`, `MOD_`, `THE_`, `REG_`, `PAR_` prefixes separate phenomena, models, theories, regions, and paradigms
-- **Confidence tracking** — every `PHE_`, `MOD_`, and `REG_` page carries an `established` / `debated` / `speculative` rating
+- **Typed concept pages** — `PHE_`, `MOD_`, `THE_`, `REG_`, `CEL_`, `NET_`, `PAR_`, `TECH_`, `ANA_`, `DAT_` prefixes cover phenomena, models, theories, regions, cell types, circuits, paradigms, techniques, analysis methods, and datasets
+- **Confidence tracking** — every `PHE_`, `MOD_`, `REG_`, `CEL_`, `NET_`, `TECH_`, and `ANA_` page carries an `established` / `debated` / `speculative` rating
 - **Conflict surfacing** — papers that disagree are represented with both positions; irreconcilable conflicts are flagged for human review rather than silently resolved
 
-See **[QUICKSTART.md](QUICKSTART.md)** for session invocation prompts.
+See **[docs/QUICKSTART.md](docs/QUICKSTART.md)** for session invocation prompts.
 See the **[NeuroWiki template](https://github.com/ccnmaastricht/NeuroWiki.git)** for setup instructions if starting a new project.
 
 ## Legal notice
@@ -59,7 +71,7 @@ NeuroWiki uses a dual license reflecting the two distinct layers of the project:
 
 | Layer | License |
 |-------|---------|
-| Infrastructure files (AGENT.md, INGESTION.md, REFINE_*.md, validate.py, setup.sh, etc.) | Apache 2.0 with template exception |
+| Infrastructure files (CLAUDE.md, AGENTS.md, agent/*.md, scripts/*, validate.py, etc.) | Apache 2.0 with template exception |
 | Wiki content (wiki/pages/, wiki/index.md, wiki/log.md, .bib files) | CC BY 4.0 |
 
 **The template exception** means that using NeuroWiki to build a project wiki does not make your wiki a Derivative Work of NeuroWiki. Your wiki content is entirely your own — you may license it however you choose. The Apache 2.0 terms only apply if you distribute modified versions of the infrastructure files themselves.

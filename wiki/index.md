@@ -1,7 +1,7 @@
 ---
 type: index
 title: Wiki Root Index
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## Ingestion Log
@@ -21,14 +21,10 @@ updated: 2026-06-28
 | [PHE_gamma-synchrony](pages/PHE_gamma-synchrony.md) | Gamma Synchrony in Visual Cortex | debated | 2026-06-28 |
 | [PHE_figure-ground-segregation](pages/PHE_figure-ground-segregation.md) | Figure-Ground Segregation | established | 2026-06-28 |
 
-## Models
+## Computational Models
 | Page | Title | Confidence | Updated |
 |------|-------|------------|---------|
-| [MOD_kuramoto-v1-oscillator](pages/MOD_kuramoto-v1-oscillator.md) | Kuramoto Phase Oscillator Model of V1 (Karimian et al., 2025) | speculative | 2026-06-28 |
-
-## Methods & Analysis
-| Page | Title | Confidence | Updated |
-|------|-------|------------|---------|
+| [MOD_kuramoto-v1-oscillator](pages/MOD_kuramoto-v1-oscillator.md) | Kuramoto Phase Oscillator Model of V1 (Karimian et al., 2025) | speculative | 2026-06-29 |
 
 ## Theories
 | Page | Title | Status | Updated |
@@ -36,12 +32,32 @@ updated: 2026-06-28
 | [THE_binding-by-synchrony](pages/THE_binding-by-synchrony.md) | Binding by Synchrony | active-research-area | 2026-06-28 |
 | [THE_weakly-coupled-oscillators](pages/THE_weakly-coupled-oscillators.md) | Theory of Weakly Coupled Oscillators Applied to Visual Cortex | active-research-area | 2026-06-28 |
 
-## Brain Regions & Cell Types
+## Brain Regions
 | Page | Title | Confidence | Updated |
 |------|-------|------------|---------|
-| [REG_v1](pages/REG_v1.md) | Primary Visual Cortex (V1) | established | 2026-06-28 |
+| [REG_v1](pages/REG_v1.md) | Primary Visual Cortex (V1) | established | 2026-06-29 |
 
-## Paradigms & Datasets
+## Cell Types
+| Page | Title | Confidence | Updated |
+|------|-------|------------|---------|
+
+## Neural Circuits & Networks
+| Page | Title | Confidence | Updated |
+|------|-------|------------|---------|
+
+## Experimental Paradigms
 | Page | Title | Updated |
 |------|-------|---------|
 | [PAR_texture-figure-ground-discrimination](pages/PAR_texture-figure-ground-discrimination.md) | Texture Figure-Ground Discrimination (Karimian et al., 2025) | 2026-06-28 |
+
+## Technical Methods
+| Page | Title | Confidence | Updated |
+|------|-------|------------|---------|
+
+## Analysis Methods
+| Page | Title | Confidence | Updated |
+|------|-------|------------|---------|
+
+## Canonical Datasets
+| Page | Title | Updated |
+|------|-------|---------|

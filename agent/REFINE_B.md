@@ -1,7 +1,7 @@
 # REFINE_B.md — Depth Audit
 
 ```
-Read AGENT.md fully, then read REFINE_B.md fully.
+Read agent/REFINE_B.md fully.
 Run the Depth Audit across all pages in wiki/pages/.
 Follow this workflow exactly. Save the report and print the session summary when done.
 ```
@@ -18,7 +18,7 @@ Gaps identified here are filled by ingesting more PDFs — not by writing from a
 
 ## Step B1 — Derive Project-Specific Questions
 
-Read Section 1 of AGENT.md. From the research question, model types, brain regions, and key phenomena listed there, derive 3–5 concrete questions per category below that are specific to this project. Generate these fresh — do not reuse examples from this file. Record the derived questions at the top of the audit report (Step B3) so future readers know what standard was applied.
+Read the **Project Identity** section of the agent context file (CLAUDE.md / AGENTS.md / GEMINI.md / CURSOR.md, as appropriate) or `project.md`. From the research question, model types, brain regions, and key phenomena listed there, derive 3–5 concrete questions per category below that are specific to this project. Generate these fresh — do not reuse examples from this file. Record the derived questions at the top of the audit report (Step B3) so future readers know what standard was applied.
 
 ### The four depth categories
 
@@ -103,18 +103,17 @@ This directly guides which PDFs to add in the next ingestion sessions.>
 
 ---
 
-## Step B4 — Session Summary
+## Step B4 — Write Session Log Entry
+
+Append a new entry to `wiki/log.md` (after the opening `---`, newest first) using the canonical format from the agent context file's **Session Log** section (see CLAUDE.md / AGENTS.md / GEMINI.md / CURSOR.md). Print the entry to the conversation.
+
+For the **Changes** section, include:
 
 ```
-## Depth Audit — YYYY-MM-DD
-
-Pages audited: N
-No gaps: N  |  Minor gaps: N  |  Major gaps: N
-
-Report saved to: wiki/depth-audit-YYYY-MM-DD.md
-
-Top PDF acquisition priorities:
-1. 
-2. 
-3. 
+- Pages audited: N
+- No gaps: N | Minor gaps: N | Major gaps: N
+- Audit report: wiki/depth-audit-YYYY-MM-DD.md
+- Top PDF acquisition priorities: <1. topic — for pages; 2. topic — for pages; 3. topic — for pages>
 ```
+
+Note: REFINE_B writes no wiki pages. Leave **Flags raised** and **Flags resolved** as "none" unless citation issues were discovered while reading.

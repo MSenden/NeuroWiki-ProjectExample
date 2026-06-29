@@ -1,7 +1,7 @@
 # REFINE_C.md — Cross-Link Audit
 
 ```
-Read AGENT.md fully, then read REFINE_C.md fully.
+Read agent/REFINE_C.md fully.
 Run the Cross-Link Audit across all pages in wiki/pages/ and wiki/index.md.
 Follow this workflow exactly. Print the session summary when done.
 ```
@@ -63,28 +63,21 @@ Otherwise link the slug and leave the term as-is in the surrounding prose.
 
 ---
 
-## Step C4 — Session Summary
+## Step C4 — Write Session Log Entry
+
+Append a new entry to `wiki/log.md` (after the opening `---`, newest first) using the canonical format from the agent context file's **Session Log** section (see CLAUDE.md / AGENTS.md / GEMINI.md / CURSOR.md). Print the entry to the conversation.
+
+For the **Changes** section, include:
 
 ```
-## Cross-Link Audit — YYYY-MM-DD
-
-Pages audited: N
-Pages modified: N
-Pages with no changes: N
-
-Links added: N total
-  By page: <page>: +N
-
-Redundant links removed: N total
-  By page: <page>: -N
-
-Synonyms resolved:
-  "<term>" → [[TYPE_slug]] on <page>
-
-index.md updates:
-  Entries added: <list>
-  Broken paths fixed: <list>
-
-Concepts mentioned with no existing wiki page (candidates for future pages):
-  "<concept>" — mentioned on: <page1>, <page2>
+- Pages audited: N
+- Pages modified: N
+- Links added: N total (<page: +N, ...>)
+- Redundant links removed: N total (<page: -N, ...>)
+- Synonyms resolved: <"term" → [[TYPE_slug]] on page, or "none">
+- index.md entries added: <list or "none">
+- Broken paths fixed: <list or "none">
+- Concepts with no existing page: <"concept" — mentioned on pages, or "none">
 ```
+
+List any concepts with no existing page under **Action items** as candidates for future pages.

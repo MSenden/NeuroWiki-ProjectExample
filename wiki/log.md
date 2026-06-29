@@ -5,6 +5,40 @@ See VERIFICATION.md for the verification protocol.
 
 ---
 
+## Session 2026-06-29 — Structural Harmonization (Template Update)
+
+**Run by**: agent
+
+### Changes
+
+- Pages audited: 7 (MOD_kuramoto-v1-oscillator, PHE_gamma-synchrony, PHE_figure-ground-segregation, THE_binding-by-synchrony, THE_weakly-coupled-oscillators, REG_v1, PAR_texture-figure-ground-discrimination) + wiki/index.md
+- Pages with no issues: PHE_gamma-synchrony, PHE_figure-ground-segregation, THE_binding-by-synchrony, THE_weakly-coupled-oscillators
+- Pages repaired: 4
+- Missing frontmatter fields added:
+  - MOD_kuramoto-v1-oscillator: `explanatory_character`, `marr_level`, `construction`, `exploratory` (replacing obsolete `subtype` and `explanatory_role`)
+- Missing sections stubbed:
+  - REG_v1: `Principal Cell Types` (new canonical section in updated template)
+- Section reordering: REG_v1 (Physiology integrated into Functional Role(s); new canonical order: Anatomical Identity → Connectivity → Functional Role(s) → Principal Cell Types → Controversies → Modeling Considerations)
+- Heading renames: PAR_texture-figure-ground-discrimination: "Key Studies and Datasets" → "Key Studies"
+- Notation corrections: none
+- wiki/index.md restructured to canonical template (sections renamed and split: "Models" → "Computational Models"; "Brain Regions & Cell Types" → separate "Brain Regions" + "Cell Types"; "Methods & Analysis" → separate "Technical Methods" + "Analysis Methods"; "Paradigms & Datasets" → separate "Experimental Paradigms" + "Canonical Datasets"; "Neural Circuits & Networks" added)
+- Agent workflow files updated: REFINE_A.md (comprehensive rewrite to reflect new MOD_ frontmatter fields, new page types CEL_/NET_/TECH_/ANA_/DAT_, corrected section orders); INGESTION.md, REFINE_B.md, REVIEW.md, REFINE_C.md (AGENT.md references → agent context file); README.md and docs/VERIFICATION.md (AGENT.md references updated; repo layout and page type list corrected)
+
+### Flags raised
+- ⚑ Human review: none
+- `<!-- UNCITED -->`: none
+- `<!-- UNRESOLVED -->`: none
+
+### Flags resolved this session
+- none
+
+### Action items
+- REG_v1 — `Principal Cell Types` section is a stub; populate in next ingestion session covering V1 cell types (e.g., pyramidal cells, PV interneurons, SST interneurons, VIP interneurons)
+
+**Sign-off**: *(pending)*
+
+---
+
 ## 2026-06-28 — Ingestion Session (Ray2010, Lowet2015, Lowet2017, Karimian2025, Roelfsema2023)
 
 **Files created:**

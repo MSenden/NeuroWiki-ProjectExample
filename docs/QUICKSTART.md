@@ -8,7 +8,7 @@ Copy the relevant prompt and paste it at the start of an agent session.
 
 ### Ingestion — single PDF
 ```
-Read agent/AGENT.md fully, then read agent/INGESTION.md fully.
+Read agent/INGESTION.md fully, then read agent/TEMPLATES.md fully.
 Process the following PDF, following the workflow in agent/INGESTION.md exactly:
 - raw/<filename>.pdf
 Print the session summary when done.
@@ -16,7 +16,7 @@ Print the session summary when done.
 
 ### Ingestion — batch
 ```
-Read agent/AGENT.md fully, then read agent/INGESTION.md fully.
+Read agent/INGESTION.md fully, then read agent/TEMPLATES.md fully.
 Process the following PDFs one at a time, completing all steps before moving to the next:
 - raw/paper1.pdf
 - raw/paper2.pdf
@@ -25,30 +25,38 @@ Print a combined session summary when done.
 ```
 
 ```
-Read agent/AGENT.md fully, then read agent/INGESTION.md fully.
+Read agent/INGESTION.md fully, then read agent/TEMPLATES.md fully.
 Process all PDFs in raw/ one at a time, completing all steps before moving to the next.
 Print a combined session summary when done.
 ```
 
 > **Note on file picking:** Because `raw/` is git-ignored, the `@` file picker in Claude Code and similar agents will not list files inside it. Just type the path directly (e.g. `raw/smith2023.pdf`).
 
+### Review — Agent-assisted flag resolution
+```
+Read agent/REVIEW.md fully.
+Run a Review Session. Follow agent/REVIEW.md exactly.
+```
+
+> The agent will find all unsigned log entries, ask which to review, then walk through every open ⚑, UNCITED, and UNRESOLVED flag one at a time. You make every resolution decision; the agent applies changes immediately and signs off the session when all flags are cleared.
+
 ### Refinement A — Structural harmonization
 ```
-Read agent/AGENT.md fully, then read agent/REFINE_A.md fully.
+Read agent/REFINE_A.md fully, then read agent/TEMPLATES.md fully.
 Run Structural Harmonization across all pages in wiki/pages/ and wiki/index.md.
 Follow agent/REFINE_A.md exactly. Print the session summary when done.
 ```
 
 ### Refinement B — Depth audit
 ```
-Read agent/AGENT.md fully, then read agent/REFINE_B.md fully.
+Read agent/REFINE_B.md fully.
 Run the Depth Audit across all pages in wiki/pages/.
 Follow agent/REFINE_B.md exactly. Save the report and print the session summary when done.
 ```
 
 ### Refinement C — Cross-link audit
 ```
-Read agent/AGENT.md fully, then read agent/REFINE_C.md fully.
+Read agent/REFINE_C.md fully.
 Run the Cross-Link Audit across all pages in wiki/pages/ and wiki/index.md.
 Follow agent/REFINE_C.md exactly. Print the session summary when done.
 ```
@@ -66,7 +74,27 @@ Do not process any new PDFs.
 I need to evaluate our choice of [MODEL/METHOD].
 Critically evaluate the empirical support, core assumptions and biological basis,
 and how it compares to [ALTERNATIVE].
-Draw from MOD_, PHE_, THE_, and REG_ pages. Do not process any new PDFs.
+Draw from MOD_, THE_, PHE_, REG_, CEL_, and NET_ pages. Do not process any new PDFs.
+```
+
+### Decision support — method or preprocessing choice
+```
+I need to decide [DECISION, e.g. which motion correction threshold to use / whether to
+bandpass filter / which decoding method to apply].
+Our data: [brief description of modality, species, paradigm, known noise properties].
+Check the Decision Guidance and Key Assumptions sections of relevant TECH_ and ANA_ pages,
+and the Relevance to This Project sections for context from prior sessions.
+Summarise what the wiki supports and flag where the decision requires information not
+covered. Do not process any new PDFs.
+```
+
+### Decision support — model assumption check
+```
+I need to assess whether [ASSUMPTION, e.g. Gaussian noise / linear summation / stationarity]
+is justified for our use of [MODEL/METHOD].
+Check the Core Assumptions section of the relevant MOD_ or ANA_ page, including the
+biological justification and when-violated sub-items.
+Summarise what the wiki says and flag any gaps. Do not process any new PDFs.
 ```
 
 ### Wiki overview
@@ -82,13 +110,12 @@ the research question in Section 1. Do not process any new PDFs.
 
 Create one copy of this template per project or research line.
 
-1. On GitHub, click **Use this template → Create a new repository** on the [NeuroWiki template repo](https://github.com/ccnmaastricht/NeuroWiki), then clone your new repo
-2. Open `agent/AGENT.md` and complete every field marked with a blank in Section 1.
-3. Run the setup script:
+1. On GitHub, click **Use this template → Create a new repository** on the [NeuroWiki template repo](https://github.com/ccnmaastricht/NeuroWiki-Project), then clone your new repo
+2. Run the setup script — it will ask for your project identity interactively:
    ```bash
-   bash scripts/setup.sh "My Project Name"
+   bash scripts/setup.sh
    ```
-4. Add PDFs to `raw/` and run your first ingestion session
+3. Add PDFs to `raw/` and run your first ingestion session
 
 ---
 

@@ -1,7 +1,7 @@
 # REFINE_A.md — Structural Harmonization
 
 ```
-Read AGENT.md fully, then read REFINE_A.md fully.
+Read agent/REFINE_A.md fully, then read agent/TEMPLATES.md fully.
 Run Structural Harmonization across all pages in wiki/pages/ and wiki/index.md.
 Follow this workflow exactly. Print the session summary when done.
 ```
@@ -18,27 +18,38 @@ If a required section is missing, add a stub — never invented text.
 
 ## Step A1 — Canonical Structure Checklist
 
+The authoritative page templates are in `agent/TEMPLATES.md` Section 1. The checklist below distils the structural requirements for auditing purposes.
+
 ### YAML frontmatter — required fields by type
 
 | Type | Required frontmatter fields |
 |------|-----------------------------|
 | All pages | `type`, `title`, `updated` |
-| PHE_, MOD_, REG_ | + `confidence` |
+| PHE_, MOD_, REG_, CEL_, NET_, TECH_, ANA_ | + `confidence` |
 | THE_ | + `status` |
-| MOD_ | + `subtype` |
+| MOD_ | + `explanatory_character`, `marr_level`, `construction`, `exploratory` |
+| NET_ | + `scale` |
+| TECH_ | + `subtype` |
 | All pages | `related` (list; empty list `[]` acceptable if no links yet) |
 
-Valid `type` values: `phenomenon`, `model`, `theory`, `region`, `paradigm`, `index`
+Valid `type` values: `phenomenon`, `model`, `theory`, `region`, `cell_type`, `circuit`, `paradigm`, `technique`, `analysis`, `dataset`, `index`
 
 ### Section order by page type
 
 | Type | Required sections, in order |
 |------|-----------------------------|
 | PHE_ | Description · Empirical Basis · Key Parameters and Quantitative Signatures · Generality · Controversies · Modeling Implications |
-| MOD_ | Description · Formal Description · Core Assumptions · Empirical Support · Empirical Challenges · Comparison to Alternatives · Controversies · Usage in the Literature |
+| MOD_ | Description · Descriptive Target · Explanatory Scope · Formal Description · Core Assumptions · Empirical Support · Empirical Challenges · Comparison to Alternatives · Controversies · Usage in the Literature |
 | THE_ | Core Claims · Explanatory Schema · Model Family · Mechanistic Grounding · Empirical Scope · Controversies · Key Sources |
-| REG_ | Anatomical Identity · Physiology · Connectivity · Functional Role(s) · Controversies · Modeling Considerations |
-| PAR_ | Description · What It Measures / Reveals · Standard Variants · Limitations and Confounds · Key Studies and Datasets · Relevance to This Project |
+| REG_ | Anatomical Identity · Connectivity · Functional Role(s) · Principal Cell Types · Controversies · Modeling Considerations |
+| CEL_ | Identity · Distribution · Physiology · Connectivity · Functional Role(s) · Controversies · Modeling Considerations |
+| NET_ | Description · Components · Connectivity Architecture · Functional Organization · Controversies · Modeling Considerations |
+| PAR_ | Description · What It Measures / Reveals · Standard Variants · Limitations and Confounds · Key Studies · Relevance to This Project |
+| TECH_ | Description · Spatial and Temporal Resolution · Key Assumptions and Limitations · Species and Preparation Compatibility · Standard Variants · Decision Guidance · Software and Hardware · Controversies |
+| ANA_ | Description · Key Assumptions · Known Artifacts and Limitations · Standard Variants · Decision Guidance · Software Implementations · Usage in the Literature |
+| DAT_ | Description · Recording Conditions · Modality and Scale · Data Structure and Access · Key Publications · Relevance to This Project |
+
+Note: **Decision Guidance** in TECH_ and ANA_ pages is optional — add as a stub only if source material addresses this topic. **Controversies** in all page types is optional — add only if encountered; omit the section entirely otherwise.
 
 ### Notation standards
 
@@ -76,23 +87,21 @@ For every file in `wiki/pages/` and `wiki/index.md`:
 
 ---
 
-## Step A4 — Session Summary
+## Step A4 — Write Session Log Entry
+
+Append a new entry to `wiki/log.md` (after the opening `---`, newest first) using the canonical format from the agent context file's **Session Log** section (see CLAUDE.md / AGENTS.md / GEMINI.md / CURSOR.md). Print the entry to the conversation.
+
+For the **Changes** section, include:
 
 ```
-## Structural Harmonization — YYYY-MM-DD
-
-Pages audited: N
-Pages with no issues: N
-Pages repaired: N
-
-Issues found and fixed:
-- Missing frontmatter fields: <page: field>
-- Missing sections (stubs added): <page: section>
-- Section reordering: <page>
-- Heading renames: <page: old → new>
-- Citation notation corrected: N instances across M pages
-- Link notation corrected: N instances across M pages
-
-<!-- MISSING --> stubs requiring human attention:
-- <page>: <field or section>
+- Pages audited: N
+- Pages with no issues: N
+- Pages repaired: N
+- Missing frontmatter fields added: <page: field, or "none">
+- Missing sections stubbed: <page: section, or "none">
+- Section reordering: <page, or "none">
+- Heading renames: <page: old → new, or "none">
+- Notation corrections: N instances across M pages (or "none")
 ```
+
+List any `<!-- MISSING -->` stubs added under **Action items** so the human knows what needs populating in the next ingestion session.

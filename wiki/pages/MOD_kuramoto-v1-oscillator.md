@@ -1,10 +1,14 @@
 ---
 type: model
 title: Kuramoto Phase Oscillator Model of V1 (Karimian et al., 2025)
-subtype: mechanistic
-explanatory_role: how-possibly
+explanatory_character: mechanistic
+marr_level:
+  - computational
+  - algorithmic
+construction: theory-derived
+exploratory: false
 confidence: speculative
-updated: 2026-06-28
+updated: 2026-06-29
 related:
   - THE_weakly-coupled-oscillators
   - THE_binding-by-synchrony
