@@ -5,6 +5,32 @@ See VERIFICATION.md for the verification protocol.
 
 ---
 
+## Session 2026-06-30 — Review: 2026-06-30
+
+**Run by**: Mario Senden
+
+### Changes
+
+- Target sessions: 2026-06-30 — Cross-Link Audit; 2026-06-30 — Structural Harmonization
+- ⚑ flags: 0 resolved of 0 total
+- UNCITED flags: 0 resolved of 0 total
+- UNRESOLVED flags: 0 noted of 0 total
+
+### Flags raised
+- ⚑ Human review: none
+- `<!-- UNCITED -->`: none
+- `<!-- UNRESOLVED -->`: none
+
+### Flags resolved this session
+- none
+
+### Action items
+- none
+
+**Sign-off**: ✓ Verified — Mario Senden, 2026-06-30
+
+---
+
 ## Session 2026-06-30 — Cross-Link Audit
 
 **Run by**: agent
@@ -32,7 +58,7 @@ See VERIFICATION.md for the verification protocol.
 - Consider creating a THE_binding-by-enhanced-firing page: BBRE (Roelfsema 1998/2023) is the central competing theory, referenced across 3 pages without a stub
 - Consider adding THE_weakly-coupled-oscillators to PAR_texture-figure-ground-discrimination's `related` frontmatter field — currently absent despite TWCO being the theoretical foundation the paradigm is designed to test
 
-**Sign-off**: *(pending)*
+**Sign-off**: ✓ Verified — Mario Senden, 2026-06-30
 
 ---
 
@@ -63,7 +89,7 @@ See VERIFICATION.md for the verification protocol.
 - agent/REFINE_A.md Step A1 checklist is out of sync with TEMPLATES.md: (a) MOD_ row still lists `subtype` as required field — should be `explanatory_character`, `marr_level`, `construction`, `exploratory`; (b) MOD_ section order missing `Descriptive Target` and `Explanatory Scope`; (c) REG_ section order lists `Physiology` — should be `Principal Cell Types`. Update REFINE_A.md Step A1 before next structural harmonization run.
 - PAR_texture-figure-ground-discrimination has a non-canonical `## Stimulus Parameters` section (between Standard Variants and Limitations and Confounds) with no canonical equivalent. Consider adding `## Stimulus Parameters` to the PAR_ template in TEMPLATES.md if paradigm-specific parameter tables are to be standardized.
 
-**Sign-off**: *(pending)*
+**Sign-off**: ✓ Verified — Mario Senden, 2026-06-30
 
 ---
 
