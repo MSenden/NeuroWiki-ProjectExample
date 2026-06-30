@@ -5,6 +5,37 @@ See VERIFICATION.md for the verification protocol.
 
 ---
 
+## Session 2026-06-30 — Cross-Link Audit
+
+**Run by**: agent
+
+### Changes
+
+- Pages audited: 8 (MOD_kuramoto-v1-oscillator, PAR_texture-figure-ground-discrimination, PHE_figure-ground-segregation, PHE_gamma-synchrony, REG_v1, THE_binding-by-synchrony, THE_weakly-coupled-oscillators, wiki/index.md)
+- Pages modified: 3 (PHE_gamma-synchrony, PAR_texture-figure-ground-discrimination, REG_v1)
+- Links added: 5 total (PHE_gamma-synchrony: +1, PAR_texture-figure-ground-discrimination: +3, REG_v1: +1)
+- Redundant links removed: 0 total
+- Synonyms resolved: "figure-ground discrimination task" → [[PAR_texture-figure-ground-discrimination]] on PHE_gamma-synchrony (## Empirical Basis); "TWCO" → [[THE_weakly-coupled-oscillators]] on PAR_texture-figure-ground-discrimination (×3 sections: ## Description, ## What It Measures / Reveals, ## Relevance to This Project); "Karimian2025 figure-ground paradigm" → [[PAR_texture-figure-ground-discrimination]] on REG_v1 (## Functional Role(s))
+- index.md entries added: none
+- Broken paths fixed: none
+- Concepts with no existing page: "Binding by Enhanced Firing (BBRE)" — mentioned on THE_binding-by-synchrony, PHE_figure-ground-segregation, MOD_kuramoto-v1-oscillator; "V4" — mentioned on PHE_gamma-synchrony, THE_binding-by-synchrony; "Arnold tongue" (mathematical) — mentioned on multiple pages; "PING" (Pyramidal-Interneuron Gamma) — mentioned on THE_weakly-coupled-oscillators, REG_v1; "LGN" — mentioned on REG_v1; "Communication through Coherence (CTC)" — mentioned on THE_binding-by-synchrony; "figure-ground modulation (FGM)" — mentioned on PHE_figure-ground-segregation, REG_v1
+
+### Flags raised
+- ⚑ Human review: none
+- `<!-- UNCITED -->`: none
+- `<!-- UNRESOLVED -->`: none
+
+### Flags resolved this session
+- none
+
+### Action items
+- Consider creating a THE_binding-by-enhanced-firing page: BBRE (Roelfsema 1998/2023) is the central competing theory, referenced across 3 pages without a stub
+- Consider adding THE_weakly-coupled-oscillators to PAR_texture-figure-ground-discrimination's `related` frontmatter field — currently absent despite TWCO being the theoretical foundation the paradigm is designed to test
+
+**Sign-off**: *(pending)*
+
+---
+
 ## Session 2026-06-30 — Structural Harmonization
 
 **Run by**: agent

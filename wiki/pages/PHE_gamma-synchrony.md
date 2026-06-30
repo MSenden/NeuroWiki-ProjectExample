@@ -34,7 +34,7 @@ In a 2D Kuramoto phase-oscillator lattice driven by natural images (n=80), synch
 
 Gamma coherence between macaque V1 and V2 has been directly measured and depends on dynamic frequency matching between areas (@Roberts2013†). Attention selectively synchronizes V1 and V4 gamma rhythms, facilitating attentional stimulus selection by increasing inter-areal coherence for the attended stimulus (@Bosman2012†). Gamma synchrony across cortical areas correlates with conscious visual perception in humans (@Melloni2007†) and modulates effective neuronal interactions (@Womelsdorf2007†).
 
-In humans, increased gamma-band activity has been observed for lateral spatial interactions in V1 (@Shapira2017†). Perceptual learning in a figure-ground discrimination task predicts session-by-session increases in a TWCO-based oscillator model's gamma synchrony within the trained figure region, with model synchrony changes correlating quantitatively with behavioral improvement across sessions (@Karimian2025).
+In humans, increased gamma-band activity has been observed for lateral spatial interactions in V1 (@Shapira2017†). Perceptual learning in a [[PAR_texture-figure-ground-discrimination|figure-ground discrimination task]] predicts session-by-session increases in a TWCO-based oscillator model's gamma synchrony within the trained figure region, with model synchrony changes correlating quantitatively with behavioral improvement across sessions (@Karimian2025).
 
 ## Key Parameters and Quantitative Signatures
 

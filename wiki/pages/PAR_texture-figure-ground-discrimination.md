@@ -14,11 +14,11 @@ tags: []
 
 ## Description
 
-Participants report the orientation (horizontal vs. vertical) of a rectangular figure region defined by reduced contrast heterogeneity within an otherwise uniform-statistics texture stimulus. The full-screen stimulus consists of non-overlapping Gabor annuli on an irregular grid; figure and background differ only in the statistical spread of local contrast values, with mean contrast equalized across regions. Two parameters are manipulated orthogonally: contrast heterogeneity within the figure ($\zeta$) and grid coarseness ($\rho$), implementing TWCO frequency detuning and coupling strength proxies, respectively (@Karimian2025).
+Participants report the orientation (horizontal vs. vertical) of a rectangular figure region defined by reduced contrast heterogeneity within an otherwise uniform-statistics texture stimulus. The full-screen stimulus consists of non-overlapping Gabor annuli on an irregular grid; figure and background differ only in the statistical spread of local contrast values, with mean contrast equalized across regions. Two parameters are manipulated orthogonally: contrast heterogeneity within the figure ($\zeta$) and grid coarseness ($\rho$), implementing [[THE_weakly-coupled-oscillators|TWCO]] frequency detuning and coupling strength proxies, respectively (@Karimian2025).
 
 ## What It Measures / Reveals
 
-The paradigm provides a behavioral readout of the interplay between gamma frequency detuning (contrast heterogeneity) and lateral coupling strength (element spacing) in V1. Discrimination accuracy as a function of $\zeta$ and $\rho$ reveals whether perceptual segregation follows the Arnold tongue structure predicted by TWCO (@Karimian2025).
+The paradigm provides a behavioral readout of the interplay between gamma frequency detuning (contrast heterogeneity) and lateral coupling strength (element spacing) in V1. Discrimination accuracy as a function of $\zeta$ and $\rho$ reveals whether perceptual segregation follows the Arnold tongue structure predicted by [[THE_weakly-coupled-oscillators|TWCO]] (@Karimian2025).
 
 The multi-session design (8 training + 1 transfer) additionally measures perceptual learning curves and tests their retinotopic specificity, enabling comparison with model predictions of learning-induced changes in lateral coupling strength (@Karimian2025).
 
@@ -61,4 +61,4 @@ Primary source: (@Karimian2025). Psychophysical dataset: Karimian M, Roberts MJ,
 
 ## Relevance to This Project
 
-This is the primary empirical paradigm linking gamma synchrony principles (TWCO) to human perceptual behavior. The Arnold tongue structure of behavioral data, its quantitative match to model synchrony from the [[MOD_kuramoto-v1-oscillator]], and the retinotopically specific learning effects constitute the main empirical pillars of the project's claim that gamma synchrony principles are functionally relevant to figure-ground segregation.
+This is the primary empirical paradigm linking gamma synchrony principles ([[THE_weakly-coupled-oscillators|TWCO]]) to human perceptual behavior. The Arnold tongue structure of behavioral data, its quantitative match to model synchrony from the [[MOD_kuramoto-v1-oscillator]], and the retinotopically specific learning effects constitute the main empirical pillars of the project's claim that gamma synchrony principles are functionally relevant to figure-ground segregation.
